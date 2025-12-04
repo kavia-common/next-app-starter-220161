@@ -1,0 +1,300 @@
+2025-12-04 15:59:25,606 - Knowledge - INFO - Created shared MongoDB connection pool
+2025-12-04 15:59:25,941 - Knowledge - INFO - Starting Knowledge Graph processing with 20 threads
+2025-12-04 15:59:26,126 - Knowledge - INFO - Initial configuration: chunk_size=65536, max_cache_size=500
+2025-12-04 15:59:26,323 - Knowledge - INFO - Knowledge Graph concurrency configuration: workers=20, max_batch_size=25, max_concurrent_llm_calls=50
+2025-12-04 15:59:27,906 - Knowledge - INFO - 🔍 _load_persisted_knowledge called - checking for Redis optimization
+2025-12-04 15:59:28,132 - Knowledge - WARNING - ❌ load_from_redis method not found - Redis support not attached
+2025-12-04 15:59:28,294 - Knowledge - INFO - load persisted knowledge: begin
+2025-12-04 15:59:28,469 - Knowledge - INFO - Loaded 0 files from persisted knowledge
+2025-12-04 15:59:28,680 - Knowledge - INFO - load persisted knowledge: end
+2025-12-04 15:59:28,879 - Knowledge - WARNING - No persisted knowledge found. Files will be queued during start()
+2025-12-04 15:59:29,053 - Knowledge - INFO - Redis support added with prefix knowledge:b2941xt:
+2025-12-04 15:59:29,342 - Knowledge - INFO - Starting knowledge initialization for ID: U9uWRE-b2941xt
+2025-12-04 15:59:29,521 - Knowledge - INFO - 🔍 Checking Redis for build_id: b2941xt
+2025-12-04 15:59:29,736 - Knowledge - INFO - 🔍 Full session ID: U9uWRE-b2941xt
+2025-12-04 15:59:29,911 - Knowledge - INFO - 🔍 Redis prefix will be: knowledge:b2941xt:
+2025-12-04 15:59:30,066 - Knowledge - INFO - 🔍 Using attached load_from_redis() method
+2025-12-04 15:59:30,238 - Knowledge - INFO - 🔍 Attempting to load knowledge from Redis...
+2025-12-04 15:59:30,389 - Knowledge - INFO - 🔍 Using derived instance_id for Redis lookup: b2941xt
+2025-12-04 15:59:30,589 - Knowledge - WARNING - ❌ No Redis cache found
+2025-12-04 15:59:30,788 - Knowledge - INFO - 📁 Loading knowledge from disk...
+2025-12-04 15:59:31,038 - Knowledge - INFO - load persisted docinfo: begin
+2025-12-04 15:59:31,212 - Knowledge - INFO - load persisted docinfo: end
+2025-12-04 15:59:31,410 - Knowledge - INFO - 🔍 _load_persisted_knowledge called - checking for Redis optimization
+2025-12-04 15:59:31,574 - Knowledge - INFO - ✅ load_from_redis method found - attempting Redis load
+2025-12-04 15:59:31,767 - Knowledge - INFO - 🔍 Attempting to load knowledge from Redis...
+2025-12-04 15:59:31,961 - Knowledge - INFO - 🔍 Using derived instance_id for Redis lookup: b2941xt
+2025-12-04 15:59:32,155 - Knowledge - WARNING - ❌ No Redis cache found
+2025-12-04 15:59:32,336 - Knowledge - INFO - ❌ Redis load returned False - falling back to file loading
+2025-12-04 15:59:32,541 - Knowledge - INFO - load persisted knowledge: begin
+2025-12-04 15:59:32,735 - Knowledge - INFO - Loaded 0 files from persisted knowledge
+2025-12-04 15:59:32,965 - Knowledge - INFO - load persisted knowledge: end
+2025-12-04 15:59:33,197 - Knowledge - INFO - 📁 Disk load complete in 2.22s
+2025-12-04 15:59:33,370 - Knowledge - INFO - Populating ingest queue with source files...
+2025-12-04 15:59:33,615 - Knowledge - INFO - Added 48 files from /app/data/b2c/220161/b2941xt/next-app-starter-220161 to ingest queue
+2025-12-04 15:59:33,805 - Knowledge - INFO - Worker kw1 created using shared MongoDB connection pool
+2025-12-04 15:59:33,968 - Knowledge - INFO - knowledge worker kw1 start
+2025-12-04 15:59:33,968 - Knowledge - INFO - Worker kw2 created using shared MongoDB connection pool
+2025-12-04 15:59:34,145 - Knowledge - INFO - [kw1] Queue=48, InProgress=0, PendingWorkers=0/1, Completed=0/48 (0.0%)
+2025-12-04 15:59:34,231 - Knowledge - INFO - knowledge worker kw2 start
+2025-12-04 15:59:34,231 - Knowledge - INFO - Worker kw3 created using shared MongoDB connection pool
+2025-12-04 15:59:34,379 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=48, active_workers=0/2
+2025-12-04 15:59:34,455 - Knowledge - INFO - [kw2] Queue=48, InProgress=0, PendingWorkers=0/2, Completed=0/48 (0.0%)
+2025-12-04 15:59:34,529 - Knowledge - INFO - knowledge worker kw3 start
+2025-12-04 15:59:34,529 - Knowledge - INFO - Worker kw4 created using shared MongoDB connection pool
+2025-12-04 15:59:34,623 - Knowledge - INFO - Worker kw1 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/pages/api/auth/[...nextauth].ts
+2025-12-04 15:59:34,728 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=48, active_workers=1/3
+2025-12-04 15:59:34,803 - Knowledge - INFO - [kw3] Queue=38, InProgress=0, PendingWorkers=1/3, Completed=0/48 (0.0%)
+2025-12-04 15:59:34,883 - Knowledge - INFO - knowledge worker kw4 start
+2025-12-04 15:59:34,883 - Knowledge - INFO - Worker kw5 created using shared MongoDB connection pool
+2025-12-04 15:59:34,983 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/pages/api/auth/[...nextauth].ts (ext=.ts, size=1234)
+2025-12-04 15:59:35,058 - Knowledge - INFO - Worker kw2 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/package.json
+2025-12-04 15:59:35,179 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=38, active_workers=2/4
+2025-12-04 15:59:35,284 - Knowledge - INFO - [kw4] Queue=28, InProgress=0, PendingWorkers=2/4, Completed=0/48 (0.0%)
+2025-12-04 15:59:35,361 - Knowledge - INFO - knowledge worker kw5 start
+2025-12-04 15:59:35,361 - Knowledge - INFO - Worker kw6 created using shared MongoDB connection pool
+2025-12-04 15:59:35,443 - Knowledge - INFO - Worker kw1 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/pages/api/hello.ts
+2025-12-04 15:59:35,522 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/package.json (ext=.json, size=3009)
+2025-12-04 15:59:35,621 - Knowledge - INFO - Worker kw3 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/ui/dropdown-menu.tsx
+2025-12-04 15:59:35,723 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=28, active_workers=3/5
+2025-12-04 15:59:35,819 - Knowledge - INFO - [kw5] Queue=18, InProgress=0, PendingWorkers=3/5, Completed=0/48 (0.0%)
+2025-12-04 15:59:35,891 - Knowledge - INFO - knowledge worker kw6 start
+2025-12-04 15:59:35,891 - Knowledge - INFO - Worker kw7 created using shared MongoDB connection pool
+2025-12-04 15:59:35,971 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/pages/api/hello.ts (ext=.ts, size=413)
+2025-12-04 15:59:36,078 - Knowledge - INFO - Worker kw2 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/prisma/migrations/20221223143416_add_next_auth_schema/migration.sql
+2025-12-04 15:59:36,183 - Knowledge - INFO - Worker kw3 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/ui/button.tsx
+2025-12-04 15:59:36,261 - Knowledge - INFO - Worker kw4 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/app/layout.tsx
+2025-12-04 15:59:36,347 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=18, active_workers=4/6
+2025-12-04 15:59:36,449 - Knowledge - INFO - [kw6] Queue=8, InProgress=0, PendingWorkers=4/6, Completed=0/48 (0.0%)
+2025-12-04 15:59:36,531 - Knowledge - INFO - knowledge worker kw7 start
+2025-12-04 15:59:36,532 - Knowledge - INFO - Worker kw8 created using shared MongoDB connection pool
+2025-12-04 15:59:36,612 - Knowledge - INFO - Worker kw1 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/pages/contact.tsx
+2025-12-04 15:59:36,724 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/prisma/migrations/20221223143416_add_next_auth_schema/migration.sql (ext=.sql, size=1805)
+2025-12-04 15:59:36,802 - Knowledge - INFO - Worker kw3 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/ui/card.tsx
+2025-12-04 15:59:36,917 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/app/layout.tsx (ext=.tsx, size=778)
+2025-12-04 15:59:37,015 - Knowledge - INFO - Worker kw5 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/mocks/browser.ts
+2025-12-04 15:59:37,138 - Knowledge - INFO - Batch sizing: calculated=8, max_allowed=25, queue=8, active_workers=5/7
+2025-12-04 15:59:37,329 - Knowledge - INFO - knowledge worker kw8 start
+2025-12-04 15:59:37,341 - Knowledge - INFO - Worker kw9 created using shared MongoDB connection pool
+2025-12-04 15:59:37,486 - Knowledge - INFO - Worker kw1 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/pages/ssr.tsx
+2025-12-04 15:59:37,580 - Knowledge - INFO - Worker kw2 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/prisma/migrations/migration_lock.toml
+2025-12-04 15:59:37,729 - Knowledge - INFO - Worker kw3 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/Layout/index.tsx
+2025-12-04 15:59:37,819 - Knowledge - INFO - Worker kw4 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/stories/Button.stories.tsx
+2025-12-04 15:59:37,936 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/mocks/browser.ts (ext=.ts, size=154)
+2025-12-04 15:59:38,218 - Knowledge - INFO - knowledge worker kw9 start
+2025-12-04 15:59:38,219 - Knowledge - INFO - Worker kw10 created using shared MongoDB connection pool
+2025-12-04 15:59:38,308 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/pages/ssr.tsx (ext=.tsx, size=190)
+2025-12-04 15:59:38,417 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/prisma/migrations/migration_lock.toml (ext=.toml, size=126)
+2025-12-04 15:59:38,516 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/Layout/index.tsx (ext=.tsx, size=439)
+2025-12-04 15:59:38,609 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/stories/Button.stories.tsx (ext=.tsx, size=520)
+2025-12-04 15:59:38,703 - Knowledge - INFO - Worker kw5 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/README.md
+2025-12-04 15:59:38,917 - Knowledge - INFO - knowledge worker kw10 start
+2025-12-04 15:59:38,918 - Knowledge - INFO - Worker kw11 created using shared MongoDB connection pool
+2025-12-04 15:59:39,010 - Knowledge - INFO - Worker kw1 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/pages/index.tsx
+2025-12-04 15:59:39,118 - Knowledge - INFO - Worker kw2 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/cspell-tool.txt
+2025-12-04 15:59:39,223 - Knowledge - INFO - Worker kw3 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/Header/header.module.css
+2025-12-04 15:59:39,342 - Knowledge - INFO - Worker kw4 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/stories/Header.stories.tsx
+2025-12-04 15:59:39,430 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/README.md (ext=.md, size=6525)
+2025-12-04 15:59:39,608 - Knowledge - INFO - knowledge worker kw11 start
+2025-12-04 15:59:39,610 - Knowledge - INFO - Worker kw12 created using shared MongoDB connection pool
+2025-12-04 15:59:39,724 - Knowledge - INFO - Worker kw1 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/pages/_app.tsx
+2025-12-04 15:59:39,809 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/cspell-tool.txt (ext=.txt, size=161)
+2025-12-04 15:59:39,895 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/Header/header.module.css (ext=.css, size=184)
+2025-12-04 15:59:40,014 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/stories/Header.stories.tsx (ext=.tsx, size=442)
+2025-12-04 15:59:40,089 - Knowledge - INFO - Worker kw5 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/tests/Header.test.tsx
+2025-12-04 15:59:40,319 - Knowledge - INFO - knowledge worker kw12 start
+2025-12-04 15:59:40,320 - Knowledge - INFO - Worker kw13 created using shared MongoDB connection pool
+2025-12-04 15:59:40,433 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/pages/_app.tsx (ext=.tsx, size=1994)
+2025-12-04 15:59:40,519 - Knowledge - INFO - Worker kw2 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/next-env.d.ts
+2025-12-04 15:59:40,597 - Knowledge - INFO - Worker kw3 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/Header/types.ts
+2025-12-04 15:59:40,707 - Knowledge - INFO - Worker kw4 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/tsconfig.json
+2025-12-04 15:59:40,823 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/tests/Header.test.tsx (ext=.tsx, size=467)
+2025-12-04 15:59:41,006 - Knowledge - INFO - knowledge worker kw13 start
+2025-12-04 15:59:41,007 - Knowledge - INFO - Worker kw14 created using shared MongoDB connection pool
+2025-12-04 15:59:41,123 - Knowledge - INFO - Worker kw1 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/vitest.config.ts
+2025-12-04 15:59:41,218 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/next-env.d.ts (ext=.ts, size=328)
+2025-12-04 15:59:41,342 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/Header/types.ts (ext=.ts, size=102)
+2025-12-04 15:59:41,467 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/tsconfig.json (ext=.json, size=687)
+2025-12-04 15:59:41,571 - Knowledge - INFO - Worker kw5 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/tests/Button.test.tsx
+2025-12-04 15:59:41,776 - Knowledge - INFO - knowledge worker kw14 start
+2025-12-04 15:59:41,776 - Knowledge - INFO - Worker kw15 created using shared MongoDB connection pool
+2025-12-04 15:59:41,860 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/vitest.config.ts (ext=.ts, size=314)
+2025-12-04 15:59:41,969 - Knowledge - INFO - Worker kw2 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/renovate.json
+2025-12-04 15:59:42,085 - Knowledge - INFO - Worker kw3 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/Header/index.tsx
+2025-12-04 15:59:42,164 - Knowledge - INFO - Worker kw4 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/logger.ts
+2025-12-04 15:59:42,283 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/tests/Button.test.tsx (ext=.tsx, size=316)
+2025-12-04 15:59:42,475 - Knowledge - INFO - knowledge worker kw15 start
+2025-12-04 15:59:42,475 - Knowledge - INFO - Worker kw16 created using shared MongoDB connection pool
+2025-12-04 15:59:42,564 - Knowledge - INFO - Worker kw1 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/biome.json
+2025-12-04 15:59:42,698 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/renovate.json (ext=.json, size=251)
+2025-12-04 15:59:42,778 - Knowledge - INFO - Worker kw3 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/next.config.js
+2025-12-04 15:59:42,858 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/logger.ts (ext=.ts, size=95)
+2025-12-04 15:59:42,947 - Knowledge - INFO - Worker kw5 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/sandbox.config.json
+2025-12-04 15:59:43,149 - Knowledge - INFO - knowledge worker kw16 start
+2025-12-04 15:59:43,150 - Knowledge - INFO - Worker kw17 created using shared MongoDB connection pool
+2025-12-04 15:59:43,235 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/biome.json (ext=.json, size=7671)
+2025-12-04 15:59:43,346 - Knowledge - INFO - Worker kw2 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/Counter/index.tsx
+2025-12-04 15:59:43,451 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/next.config.js (ext=.js, size=424)
+2025-12-04 15:59:43,547 - Knowledge - INFO - Worker kw4 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/types/next-auth.d.ts
+2025-12-04 15:59:43,660 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/sandbox.config.json (ext=.json, size=27)
+2025-12-04 15:59:43,872 - Knowledge - INFO - knowledge worker kw17 start
+2025-12-04 15:59:43,873 - Knowledge - INFO - Worker kw18 created using shared MongoDB connection pool
+2025-12-04 15:59:43,952 - Knowledge - INFO - Worker kw1 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/styles/Home.module.css
+2025-12-04 15:59:44,048 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/Counter/index.tsx (ext=.tsx, size=566)
+2025-12-04 15:59:44,126 - Knowledge - INFO - Worker kw3 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/postcss.config.js
+2025-12-04 15:59:44,240 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/types/next-auth.d.ts (ext=.ts, size=1144)
+2025-12-04 15:59:44,330 - Knowledge - INFO - Worker kw5 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/cspell.json
+2025-12-04 15:59:44,514 - Knowledge - INFO - knowledge worker kw18 start
+2025-12-04 15:59:44,515 - Knowledge - INFO - Worker kw19 created using shared MongoDB connection pool
+2025-12-04 15:59:44,606 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/styles/Home.module.css (ext=.css, size=1987)
+2025-12-04 15:59:44,713 - Knowledge - INFO - Worker kw2 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/theme-provider.tsx
+2025-12-04 15:59:44,815 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/postcss.config.js (ext=.js, size=80)
+2025-12-04 15:59:44,937 - Knowledge - INFO - Worker kw4 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/store/counter.ts
+2025-12-04 15:59:45,055 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/cspell.json (ext=.json, size=444)
+2025-12-04 15:59:45,231 - Knowledge - INFO - knowledge worker kw19 start
+2025-12-04 15:59:45,233 - Knowledge - INFO - Worker kw20 created using shared MongoDB connection pool
+2025-12-04 15:59:45,342 - Knowledge - INFO - Worker kw1 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/styles/globals.css
+2025-12-04 15:59:45,434 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/theme-provider.tsx (ext=.tsx, size=305)
+2025-12-04 15:59:45,553 - Knowledge - INFO - Worker kw3 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/components.json
+2025-12-04 15:59:45,634 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/store/counter.ts (ext=.ts, size=89)
+2025-12-04 15:59:45,706 - Knowledge - INFO - Worker kw5 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/SECURITY.md
+2025-12-04 15:59:45,909 - Knowledge - INFO - knowledge worker kw20 start
+2025-12-04 15:59:45,992 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/styles/globals.css (ext=.css, size=3891)
+2025-12-04 15:59:46,100 - Knowledge - INFO - Worker kw2 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/theme-switcher.tsx
+2025-12-04 15:59:46,224 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/components.json (ext=.json, size=358)
+2025-12-04 15:59:46,312 - Knowledge - INFO - Worker kw4 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/store/index.ts
+2025-12-04 15:59:46,407 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/SECURITY.md (ext=.md, size=619)
+2025-12-04 15:59:46,712 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/theme-switcher.tsx (ext=.tsx, size=1398)
+2025-12-04 15:59:46,922 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/store/index.ts (ext=.ts, size=75)
+2025-12-04 15:59:47,015 - Knowledge - INFO - Worker kw5 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/public/mockServiceWorker.js
+2025-12-04 15:59:47,122 - Knowledge - INFO - Worker kw2 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/utils.ts
+2025-12-04 15:59:47,233 - Knowledge - INFO - Worker kw4 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/mocks/server.ts
+2025-12-04 15:59:47,479 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/utils.ts (ext=.ts, size=171)
+2025-12-04 15:59:47,593 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/mocks/server.ts (ext=.ts, size=149)
+2025-12-04 15:59:47,781 - Knowledge - INFO - Worker kw4 processing /app/data/b2c/220161/b2941xt/next-app-starter-220161/mocks/handlers.ts
+2025-12-04 15:59:47,810 - Knowledge - INFO - Processing batch of 10 files
+2025-12-04 15:59:47,994 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/mocks/handlers.ts (ext=.ts, size=968)
+2025-12-04 15:59:48,088 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/package.json
+2025-12-04 15:59:48,255 - Knowledge - INFO - Processing batch of 10 files
+2025-12-04 15:59:48,320 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/prisma/migrations/20221223143416_add_next_auth_schema/migration.sql
+2025-12-04 15:59:48,437 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/app/layout.tsx
+2025-12-04 15:59:48,567 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/prisma/migrations/migration_lock.toml
+2025-12-04 15:59:48,698 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/stories/Button.stories.tsx
+2025-12-04 15:59:48,786 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/cspell-tool.txt
+2025-12-04 15:59:48,886 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/stories/Header.stories.tsx
+2025-12-04 15:59:49,003 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/next-env.d.ts
+2025-12-04 15:59:49,091 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/ui/button.tsx (small file (2657 bytes))
+2025-12-04 15:59:49,091 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/tsconfig.json
+2025-12-04 15:59:49,193 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/renovate.json
+2025-12-04 15:59:49,271 - Knowledge - INFO - Fast-tracked /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/ui/card.tsx (small file (2093 bytes))
+2025-12-04 15:59:49,392 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/logger.ts
+2025-12-04 15:59:49,494 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/Counter/index.tsx
+2025-12-04 15:59:49,727 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/types/next-auth.d.ts
+2025-12-04 15:59:50,089 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/theme-provider.tsx
+2025-12-04 15:59:50,185 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/store/counter.ts
+2025-12-04 15:59:50,274 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/theme-switcher.tsx
+2025-12-04 15:59:50,383 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/store/index.ts
+2025-12-04 15:59:50,499 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/utils.ts
+2025-12-04 15:59:50,603 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/mocks/server.ts
+2025-12-04 15:59:50,798 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/mocks/handlers.ts
+2025-12-04 15:59:52,102 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 270, Duration: 0ms
+2025-12-04 15:59:52,328 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 227ms
+2025-12-04 15:59:52,567 - Knowledge - INFO - Progress: 41.7% | Files: 20/48 | Rate: 0.76 files/sec | Queue: 0
+2025-12-04 15:59:55,098 - Knowledge - INFO - [LLM_CALL] Completed: index.tsx:chunk1, Duration: 5497ms, PromptTokens: 2210, CompletionTokens: 250, Cost: $0.00032
+2025-12-04 15:59:55,302 - Knowledge - INFO - done ingest for /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/Header/index.tsx
+2025-12-04 15:59:55,303 - Knowledge - INFO - [LLM_CALL] Completed: contact.tsx:chunk1, Duration: 8681ms, PromptTokens: 2148, CompletionTokens: 270, Cost: $0.00032
+2025-12-04 15:59:55,615 - Knowledge - INFO - done ingest for /app/data/b2c/220161/b2941xt/next-app-starter-220161/pages/contact.tsx
+2025-12-04 15:59:56,068 - Knowledge - INFO - done ingest for /app/data/b2c/220161/b2941xt/next-app-starter-220161/pages/index.tsx
+2025-12-04 15:59:56,415 - Knowledge - INFO - Processing batch of 10 files
+2025-12-04 15:59:56,570 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/pages/api/auth/[...nextauth].ts
+2025-12-04 15:59:56,778 - Knowledge - INFO - [LLM_CALL] Completed: mockServiceWorker.js:chunk1, Duration: 9407ms, PromptTokens: 4972, CompletionTokens: 526, Cost: $0.00071
+2025-12-04 15:59:56,800 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/pages/api/hello.ts
+2025-12-04 15:59:56,975 - Knowledge - INFO - done ingest for /app/data/b2c/220161/b2941xt/next-app-starter-220161/public/mockServiceWorker.js
+2025-12-04 15:59:56,976 - Knowledge - INFO - [LLM_CALL] Completed: dropdown-menu.tsx:chunk1, Duration: 10147ms, PromptTokens: 4462, CompletionTokens: 466, Cost: $0.00063
+2025-12-04 15:59:57,132 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/pages/contact.tsx
+2025-12-04 15:59:57,288 - Knowledge - INFO - done ingest for /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/ui/dropdown-menu.tsx
+2025-12-04 15:59:57,322 - Knowledge - INFO - Processing batch of 8 files
+2025-12-04 15:59:57,378 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/pages/ssr.tsx
+2025-12-04 15:59:57,563 - Knowledge - INFO - Processing batch of 10 files
+2025-12-04 15:59:57,604 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/mocks/browser.ts
+2025-12-04 15:59:57,686 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/pages/index.tsx
+2025-12-04 15:59:57,785 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/ui/dropdown-menu.tsx
+2025-12-04 15:59:57,873 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/README.md
+2025-12-04 15:59:57,961 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/pages/_app.tsx
+2025-12-04 15:59:58,037 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/ui/button.tsx
+2025-12-04 15:59:58,141 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/tests/Header.test.tsx
+2025-12-04 15:59:58,265 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/vitest.config.ts
+2025-12-04 15:59:58,383 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/ui/card.tsx
+2025-12-04 15:59:58,498 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/tests/Button.test.tsx
+2025-12-04 15:59:58,607 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/biome.json
+2025-12-04 15:59:58,707 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/Layout/index.tsx
+2025-12-04 15:59:58,792 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/sandbox.config.json
+2025-12-04 15:59:58,870 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/styles/Home.module.css
+2025-12-04 15:59:58,982 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/Header/header.module.css
+2025-12-04 15:59:59,065 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/cspell.json
+2025-12-04 15:59:59,209 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/styles/globals.css
+2025-12-04 15:59:59,334 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/Header/types.ts
+2025-12-04 15:59:59,449 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/SECURITY.md
+2025-12-04 15:59:59,679 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/components/Header/index.tsx
+2025-12-04 15:59:59,747 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/public/mockServiceWorker.js
+2025-12-04 15:59:59,854 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/next.config.js
+2025-12-04 16:00:00,183 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/postcss.config.js
+2025-12-04 16:00:00,370 - Knowledge - INFO - process ingested knowledge for /app/data/b2c/220161/b2941xt/next-app-starter-220161/components.json
+2025-12-04 16:00:00,561 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 271, Duration: 0ms
+2025-12-04 16:00:00,728 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 167ms
+2025-12-04 16:00:00,932 - Knowledge - INFO - Progress: 100.0% | Files: 48/48 | Rate: 1.37 files/sec | Queue: 0
+2025-12-04 16:00:01,525 - Knowledge - INFO - Knowledge creation complete
+2025-12-04 16:00:01,750 - Knowledge - INFO - ==================================================
+2025-12-04 16:00:01,931 - Knowledge - INFO - KNOWLEDGE GRAPH GENERATION PERFORMANCE SUMMARY
+2025-12-04 16:00:02,129 - Knowledge - INFO - ==================================================
+2025-12-04 16:00:02,320 - Knowledge - INFO - Total processing time: 36.14 seconds (0.60 minutes)
+2025-12-04 16:00:02,532 - Knowledge - INFO - Files processed: 0
+2025-12-04 16:00:02,692 - Knowledge - INFO - Processing rate: 0.00 files/second
+2025-12-04 16:00:02,868 - Knowledge - INFO - 
+[TIME_BREAKDOWN]
+2025-12-04 16:00:03,057 - Knowledge - INFO - File Reading: 0.00s (0.0%)
+2025-12-04 16:00:03,279 - Knowledge - INFO - LLM Processing: 33.73s (93.3%)
+2025-12-04 16:00:03,440 - Knowledge - INFO - MongoDB Operations: 0.00s (0.0%)
+2025-12-04 16:00:03,630 - Knowledge - INFO - Redis Operations: 0.00s (0.0%)
+2025-12-04 16:00:03,827 - Knowledge - INFO - WebSocket Communication: 0.39s (1.1%)
+2025-12-04 16:00:04,010 - Knowledge - INFO - Other Overhead: 2.02s (5.6%)
+2025-12-04 16:00:04,176 - Knowledge - INFO - 
+[LLM_STATS]
+2025-12-04 16:00:04,391 - Knowledge - INFO - Total LLM calls: 4
+2025-12-04 16:00:04,577 - Knowledge - INFO - Average LLM response time: 8433ms
+2025-12-04 16:00:04,778 - Knowledge - INFO - Average prompt tokens: 3448.0
+2025-12-04 16:00:04,997 - Knowledge - INFO - Average completion tokens: 378.0
+2025-12-04 16:00:05,206 - Knowledge - INFO - Total prompt tokens: 13792
+2025-12-04 16:00:05,408 - Knowledge - INFO - Total completion tokens: 1512
+2025-12-04 16:00:05,608 - Knowledge - INFO - Total LLM cost: $0.0020
+2025-12-04 16:00:05,771 - Knowledge - INFO - 
+[DATABASE_STATS]
+2025-12-04 16:00:05,940 - Knowledge - INFO - MongoDB operations: 0
+2025-12-04 16:00:06,166 - Knowledge - INFO - Redis operations: 0
+2025-12-04 16:00:06,362 - Knowledge - INFO - 
+[COMMUNICATION_STATS]
+2025-12-04 16:00:06,530 - Knowledge - INFO - WebSocket messages sent: 4
+2025-12-04 16:00:06,716 - Knowledge - INFO - Average message size: 135.2 bytes
+2025-12-04 16:00:06,914 - Knowledge - INFO - 
+[WORKER_STATS]
+2025-12-04 16:00:07,111 - Knowledge - INFO - 
+[FILE_TYPE_STATS]
+2025-12-04 16:00:07,286 - Knowledge - INFO - 
+[SLOWEST_FILES]
+2025-12-04 16:00:07,480 - Knowledge - INFO - ==================================================
+2025-12-04 16:00:07,690 - Knowledge - INFO - ==================================================
+2025-12-04 16:00:07,892 - Knowledge - INFO - KNOWLEDGE GRAPH GENERATION PERFORMANCE SUMMARY
+2025-12-04 16:00:08,104 - Knowledge - INFO - ==================================================
+2025-12-04 16:00:08,279 - Knowledge - INFO - Total processing time: 42.15 seconds (0.70 minutes)
+2025-12-04 16:00:08,460 - Knowledge - INFO - Files processed: 48 of 48
+2025-12-04 16:00:08,657 - Knowledge - INFO - Processing rate: 1.14 files/second
+2025-12-04 16:00:08,834 - Knowledge - INFO - WebSocket messages sent: 2
+2025-12-04 16:00:09,017 - Knowledge - INFO - MongoDB operations: 48
+2025-12-04 16:00:09,209 - Knowledge - INFO - Average MongoDB ops per file: 1.00
+2025-12-04 16:00:09,380 - Knowledge - INFO - LLM costs: $0.0024
+2025-12-04 16:00:09,554 - Knowledge - INFO - Prompt tokens: 16758
+2025-12-04 16:00:09,776 - Knowledge - INFO - Completion tokens: 1754
+2025-12-04 16:00:09,962 - Knowledge - INFO - Updating org costs, total cost: 0.0023774
+2025-12-04 16:00:11,675 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 268, Duration: 0ms
+2025-12-04 16:00:11,866 - Knowledge - INFO - Saving knowledge to Redis...
+2025-12-04 16:00:12,072 - Knowledge - INFO - Knowledge saved to Redis successfully
