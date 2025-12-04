@@ -1,0 +1,25 @@
+# Development Dockerfile for Next.js container
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Install dependencies
+COPY package.json package-lock.json* ./
+
+# Try to use npm by default
+RUN npm install
+
+# Copy all files
+COPY . .
+
+# Generate Prisma Client
+RUN npx prisma generate || echo "Prisma generate skipped (no schema or DB)"
+
+# Expose port
+EXPOSE 3000
+
+# Use the start script with fallback logic
+COPY start-dev.sh /usr/local/bin/start-dev.sh
+RUN chmod +x /usr/local/bin/start-dev.sh
+
+CMD ["/usr/local/bin/start-dev.sh"]

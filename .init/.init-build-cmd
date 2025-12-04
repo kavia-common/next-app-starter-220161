@@ -1,2 +1,2 @@
 { "working_directory": "/home/kavia/workspace/code-generation",
- "command": "bun install && bun run build" }
+ "command": "npm install && npm run build" }

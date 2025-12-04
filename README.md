@@ -21,7 +21,9 @@
 
 ## Pre-requirements
 
-- [Bun — A fast all-in-one JavaScript runtime](https://bun.sh/)
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- [npm](https://www.npmjs.com/) or [pnpm](https://pnpm.io/) or [yarn](https://yarnpkg.com/)
+- Optional: [Bun — A fast all-in-one JavaScript runtime](https://bun.sh/) (the project will automatically use Bun if available, otherwise falls back to npm)
 - [Biome, toolchain of the web](https://biomejs.dev/)
 
 ## 💻 Stack
@@ -56,6 +58,11 @@
 ## Install
 
 ```sh
+npm install
+```
+
+If you have Bun installed, you can also use:
+```sh
 bun install
 ```
 
@@ -64,11 +71,21 @@ bun install
 Create .env file base on .env.example then run below command
 
 ```sh
+npm run dev
+```
+
+Or with Bun:
+```sh
 bun run dev
 ```
 
 ## Run tests
 
+```sh
+npm run test
+```
+
+Or with Bun:
 ```sh
 bun run test
 ```
@@ -76,7 +93,26 @@ bun run test
 ## Run storybook
 
 ```sh
+npm run storybook
+```
+
+Or with Bun:
+```sh
 bun run storybook
+```
+
+## Docker Usage
+
+For development with Docker:
+```sh
+docker build -f Dockerfile.dev -t next-app-starter:dev .
+docker run -p 3000:3000 -v $(pwd):/app next-app-starter:dev
+```
+
+For production with Docker:
+```sh
+docker build -t next-app-starter:prod .
+docker run -p 3000:3000 next-app-starter:prod
 ```
 
 ## Pre-commit
