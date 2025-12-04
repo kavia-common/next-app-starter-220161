@@ -39,3 +39,4 @@ yarn-error.log*
 .eslintcache
 .vscode
 .yarn
+.file_activity_report.json
